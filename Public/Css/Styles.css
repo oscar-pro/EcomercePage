@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    svg {
+        width: 25px;
+    }
+
+    font-family: system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+
+    input {
+        outline: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
+    height: 100vh;
+    background-color: #EFF6FF;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "header header"
+        "nav main"
+        "footer footer";
+    ;
+
+    header {
+        border-radius: 4px;
+        grid-area: header;
+        background: linear-gradient(to right, #51A2FF, #BEDBFF);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: #21BCFF;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        grid-area: main;
+        background-color: #F0F9FF;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: #052F4A;
+        color: white;
+        border-radius: 4px;
+
+        .footer_threeDivs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+}
+
+/* Menu  */
+
+.Divition_ProfileMenu {
+    border-radius: 5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 5px;
+    padding: 2px;
+    display: grid;
+}
+
+.Profile_User {
+    padding: 2px;
+    gap: 2px;
+    border-radius: 5px;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#ProfileUser {
+    width: 200px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+#svg {
+    margin-right: 5px;
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+#UserName {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Search */
+.Divition_Header_Search {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    align-items: center;
+    gap: 5px;
+    outline: none;
+}
+
+#Search_Products {
+    width: 500px;
+    outline: none;
+    border: none;
+    padding: 2px;
+    font-size: 15px;
+    border-radius: 4px;
+    text-shadow: 1px 1px 2px #404040;
+    box-shadow: 2px 1px 5px #21BCFF;
+}
+
+
+#AsideBtn {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    display: hidden;
+}
+
+#BuscarBtn {
+    font-size: 15px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 2px;
+    background-color: white;
+    box-shadow: 2px 1px 5px #21BCFF;
+}
+
+/* Login */
+.Divition_Header_RegisterUser {
+    border-radius: 4px;
+    margin: 5px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.UserLogin {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#Login,
+#Register {
+    border: 2px solid transparent;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+    }
+}
+
+#Register {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+#svglogin {
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+#svgRegister {
+    color: white;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+/* NAV */
+
+.Ecomerce_NavNameAndListas {
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.LogoEcomerce {
+    background: linear-gradient(to right, #51A2FF, #BEDBFF);
+    border-radius: 4px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    margin: 2px;
+    gap: 8px;
+}
+
+#LogoImg {
+    box-shadow: 1px 1px 5px #ccc;
+    background-color: #21BCFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.NameEcomerce {
+    padding: 2px;
+    margin: 2px;
+    text-align: center;
+    border-radius: 2px;
+    display: hidden;
+}
+
+#Ecomerce {
+    text-align: center;
+    padding: 2px;
+    margin: 2px;
+    font-family: sans-serif;
+    color: #ffffff;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    text-shadow: -1px 1px 10px #512FFD;
+}
+
+/* quiero agregarle animación a la barra 
+*que se expanda al momento de abrir el nav
+ */
+
+#Ecomerce::before {
+    border-radius: 2px;
+    transition: 0.3s ease;
+    content: '';
+    background-color: #052F4A;
+    height: 15px;
+    width: 3px;
+    position: relative;
+    margin-right: 2px;
+    display: inline-block;
+}
+
+.Listas_NavEcomerce {
+    background-color: #51A2FF;
+    border-radius: 4px;
+    margin: 0px 2px 0px 2px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2px;
+}
+
+
+#Listas_Ul {
+    list-style: none;
+}
+
+/* Main */
+
+/* .ProductosEcomerce {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    border-radius: 4px;
+    gap: 20px;
+} */
+.ecommerce {
+    font-family: system-ui, sans-serif;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 👈 cambio */
+    align-items: center;
+}
+
+/* TITULOS */
+.section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: #052F4A;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+/* CONTENEDOR */
+.top-products,
+.more-products {
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* CAROUSEL */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 👈 mejor distribución */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* BOTONES */
+.nav {
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;    
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    flex-shrink: 0; /* 👈 evita que se deformen */
+}
+
+.nav:hover {
+    background: rgba(183, 183, 183, 0.6);
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px rgba(255,255,255,0.7);
+}
+
+.nav:active{
+    transform: scale(1.3);
+}
+
+/* CARD */
+.product-card {
+    background: white;
+    border-radius: 12px;
+    width: 250px;
+    min-width: 250px; /* 👈 CLAVE para carrusel */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* SKELETON */
+.skeleton-card {
+    width: 250px;
+    min-width: 250px; /* 👈 CLAVE */
+    height: 250px;
+    border-radius: 12px;
+    background: linear-gradient(
+        90deg,
+        #e0e0e0 25%,
+        #f5f5f5 50%,
+        #e0e0e0 75%
+    );
+    background-size: 200% 100%;
+    animation: loading 1.2s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* IMAGEN */
+.product-image {
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* INFO */
+.product-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 8px;
+}
+
+.product-name {
+    display: block;
+    font-size: 14px;
+}
+
+.product-price {
+    font-size: 16px;
+}
+
+/* DESCRIPCIÓN */
+.product-description {
+    padding: 10px;
+    font-size: 13px;
+    color: #333;
+}
+
+/* TRACK */
+.carousel-track {
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 80%;
+    min-height: 260px;
+    align-items: center;
+}
+
+/* SCROLL */
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}

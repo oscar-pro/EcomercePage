@@ -5,157 +5,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecomerse Coste</title>
+    <link rel="stylesheet" href="Css/Styles.css">
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ecomerce Coste</title>
-    </head>
-
-    <body>
-        <!-- ------------------------------------------------------
+    <!-- ------------------------------------------------------
     Header de la pagina Ecomerce 
-     -------------------------------------------------------->
-        <header>
-            <!-- Primera divición Muestra El logo del usuario y su UserName -->
-            <div class="Divition_ProfileMenu">
-                <div class="Profile_User">
-                    <!-- ------------------------------------------------------ 
-                Muestra el logo del Usario  
-                -------------------------------------------------------->
-                <img src="${user.avatar || '/images/default-avatar.png'}style="width: 50px;
-    height: 50px;
-    border-radius: 50%;">                    <!--------------------------------------------------------
-                 UserName muestra el nombre de usuario 
-                 -------------------------------------------------------->
-                    <span class="UserName"></span>
+    -------------------------------------------------------->
+    <header>
+
+        <!-- menu header -->
+        <div class="Divition_ProfileMenu">
+            <div class="Profile_User">
+                <!-- Logo Usuario -->
+                <div id="ProfileUser">
+                    <svg id="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                    </svg>
+                    <!-- Username -->
+                    <span id="UserName"><span id="User@">@</span>user</span>
                 </div>
+
+
+
             </div>
-            <div class="Divition_Header_Search">
-                <input type="search" name="Search" id="Search_Products" placeholder="Buscar...">
-                <aside>
-                    <input type="button" value="Buscar" id="BuscarBtn">
+        </div>
+
+        <!-- Search -->
+        <div class="Divition_Header_Search">
+            <input type="search" id="Search_Products" placeholder="Buscar...">
+            <aside id="AsideBtn">
+                <input type="button" value="Buscar" id="BuscarBtn">
+            </aside>
+        </div>
+
+        <!-- Login / Register -->
+        <div class="Divition_Header_RegisterUser">
+            <div class="UserLogin">
+
+                <div id="Login">
+                    <svg id="svglogin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                    </svg>
+                    <strong id="Enlace_InicioSecion_User">
+                        <a href="#">Iniciar Seción</a>
+                    </strong>
+                </div>
+
+                <div id="Register">
+                    <svg id="svgRegister" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+                    </svg>
+                    <strong id="Enlace_RegisterUser">
+                        <a href="#">Registrese</a>
+                    </strong>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <div class="Ecomerce_NavNameAndListas">
+
+            <div class="LogoEcomerce">
+                <div id="LogoImg"></div>
+                <aside class="NameEcomerce">
+                    <strong id="Ecomerce">Ecomerce</strong>
                 </aside>
             </div>
-            <div class="Divition_Header_RegisterUser">
-                <div class="UserLogin">
-                    <div id="Login">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                        </svg>
-                        <strong id="Enlace_InicioSecion_User">
-                            <a>Iniciar Secion</a>
-                        </strong>
-                    </div>
-                    <div id="Register">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-6">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
-                        </svg>
-                        <strong id="Enlace_RegisterUser">
-                            <a>Registrese</a>
-                        </strong>
-                    </div>
-                </div>
+
+            <div c lass="Listas_NavEcomerce">
+                <ul id="Listas_Ul"></ul>
             </div>
-        </header>
-        <!-- --------------------------navegation de la pagina -------------------------- -->
-        <nav>
-            <div class="Ecomerce_NavNameAndListas">
-                <!-- --------------------------
-             Divition from Logo And Name of the Page
-             -------------------------- -->
-                <div class="LogoEcomerce">
-                    <!-- Imagen de ecomerce -->
-                    <div id="LogoImg"></div>
-                    <!-- Nombre Ecomerce -->
-                    <aside class="NameEcomerce">
-                        <Strong id="Ecomerce">Ecomerce</Strong>
+
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <div class="ecommerce">
+
+            <!-- TOP PRODUCTOS -->
+            <section class="top-products">
+                <h2 class="section-title">Top 10 Productos</h2>
+
+                <div class="carousel">
+
+                    <button class="nav left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+
+                    <!-- 👇 CONTENEDOR LIMPIO -->
+                    <div class="carousel-track loading">
+
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+
+                    </div>
+
+                    <button class="nav right">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+
+                </div>
+            </section>
+
+            <!-- MÁS PRODUCTOS -->
+            <section class="more-products">
+                <h2 class="section-title">Más Productos</h2>
+
+                <div class="carousel">
+
+                    <button class="nav left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                        </svg>
+                    </button>
+
+                    <!-- 👇 CONTENEDOR LIMPIO -->
+                    <div class="carousel-track loading">
+
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
+
+                    </div>
+
+                    <button class="nav right">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </button>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <section class="footer_threeDivs">
+
+            <!-- Contacto -->
+            <div id="Contact">
+                <div class="TelefonoContact">
+                    <strong>Telefono</strong>
+                    <aside>
+                        <p><span>+57 </span>3215776202</p>
                     </aside>
                 </div>
-                <!-- Listas Ecomerce Quizás Crezca a la par de la pagina-->
-                <div class="Listas_NavEcomerce">
-                    <!-- Se Agregan Con Javascript Dependiendo si hay items(page) -->
-                    <ul id="Listas_Ul"></ul>
+
+                <div id="EmailContact">
+                    <strong>Correo</strong>
+                    <aside>
+                        <p>oscaralfaro@gmail.com</p>
+                    </aside>
+                </div>
+
+                <aside>
+                    <input type="submit" value="Ir" id="Ir_Contacto">
+                </aside>
+            </div>
+
+            <!-- Horario -->
+            <div id="Horario">
+                <div class="Horario-Atention">
+                    <p>Horario De Atención</p>
+                    <p>Lunes - Viernes</p>
+                    <p>7:00 am - 4:00 pm</p>
                 </div>
             </div>
-        </nav>
-        <!-- -------------------------- main (cuerpo) de ecommerce -------------------------- -->
-        <main>
-            <div class="ProductosEcomerce">
-                <section class="Este_Muestra_topsTen_Products">
-                    <span>Primeros Diez Productos</span>
-                    <div id="TopTen_Products">
-                         <button id="left"></button>
-                        <article id="Products_EsteYaPuede_CapturarClick_ParaComprar">
-                            <div id="ImagenProduct">
-                                <img src="#" alt="image">
-                                <aside class="NombreProduct">
-                                    <aside>
-                                        <span id="NombreProduct">Nombre</span>
-                                        <strong id="PrecioProduct"><span>Cop</span></strong>
-                                    </aside>
-                                </aside>
-                            </div>
-                            <div id="DescriptionProduct">
-                                <div id="DescriptionProduct">
-                                    <span>Descripción</span>
-                                    <aside class="DescriptionCard">
-                                        <p id="TextDescriptionProduct"></p>
-                                    </aside>
-                                </div>
-                            </div>
-                        </article>
-                        <button id="rigth"></button> 
+
+            <!-- Redes -->
+            <div id="SotialityRed">
+                <div id="SotialR    ed">
+
+                    <div id="FacebookCaja">
+                        <img src="" id="Logo_Facebook" alt="https://facebook.com">
+                        <p>Facebook</p>
                     </div>
-                </section>
 
-                <section class="Este_MuestraProductosRamdom">
-                    <aside class="Caja_MasProducts">
-                        <span id="MasProducts">
-                            Más Productos
-                        </span>
-                        <div id="ProductsRamdom">
-                            <button id="left"></button>
-                            <article id="Products">
-                                <div id="ImagenProducts">
-                                <img src="#" alt="image">
-                                <aside class="NombreProducts">
-                                    <aside>
-                                        <span id="NombreProducts">Nombre</span>
-                                        <strong id="PrecioProducts"><span>Cop</span></strong>
-                                    </aside>
-                                </aside>
-                            </div>
-                            <div id="DescriptionProducts">
-                                <div id="DescriptionProducts">
-                                    <span>Descripción</span>
-                                    <aside class="DescriptionCards">
-                                        <p id="TextDescriptionProducts"></p>
-                                    </aside>
-                                </div>
-                            </div>
-                            </article>
-                           <button id="rigth"></button> 
-                        </div>
-                    </aside>
-                </section>
+                    <div id="InstaCaja">
+                        <img src="" id="Logo_Insta" alt="Ir a Instagram">
+                        <p>Instagram</p>
+                    </div>
+
+                    <div id="GitCaja">
+                        <img src="#" id="Logo_Git" alt="Ir a GitHub">
+                        <p>GitHub</p>
+                    </div>
+
+                </div>
             </div>
-        </main>
-        <footer>
-            
-        </footer>
-    </body>
 
-    </html>
+        </section>
+
+        <aside id="AutorCredits"></aside>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="Javascript/main.js"></script>
 </body>
 
 </html>
