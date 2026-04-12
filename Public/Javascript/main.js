@@ -25,9 +25,20 @@ let RedSocialFooter = [facebook,instagram,git]
 RedSocialFooter.forEach(logo =>{
     logo.style.width = '25px';
 });
+// Scrollear page px 
+window.addEventListener("scroll", () => {
+    // hacemos que aparezca  footer al momento de hacer scroll
+    /**hay un error
+     * No tenemos alto definido, hay que aumentarlo y que al momento de hacer scroll escuche
+     */
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 50) {
+        document.querySelector("footer").style.display = 'block'
+    }
+});
 
-
-
+document.getElementById('Login').addEventListener('click',()=>{
+    window.location = 'Login.html'
+})
 
 // 1. Esperamos a que todo el HTML haya cargado primero para evitar errores
 document.addEventListener("DOMContentLoaded", () => {

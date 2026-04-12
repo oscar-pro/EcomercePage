@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    svg {
+        width: 25px;
+    }
+
+    font-family: system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+
+    input {
+        outline: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    padding: 5px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: linear-gradient(to right, #51A2FF, #BEDBFF);
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.login-card h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    box-shadow: 2px 1px 5px #21BCFF;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #21BCFF;
+    color: white;
+    transform: scale(1.05);
+}
+
+.extra {
+    margin-top: 15px;
+    font-size: 13px;
+    color: white;
+}
+
+.extra a {
+    color: #052F4A;
+    font-weight: bold;
+}
+
+.Component_LineLogin {
+    color: #486d8565;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Line {
+    background-color: #486d85;
+    height: 1px;
+    width: 150px;
+}
+
+/* Registro */
+
+.Registro-container {
+    display: none;
+    padding: 5px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Registro-card {
+    background: linear-gradient(to right, #51A2FF, #BEDBFF);
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
