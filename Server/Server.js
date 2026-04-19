@@ -22,10 +22,10 @@
  */
 
 // 1. IMPORTAR LAS LIBRERÍAS (Una vez que las instales)
-// const express = require('express');
-// const cors = require('cors');
-// const sql = require('mssql');
-// const path = require('path');
+const express = require('express');
+const cors = require('cors');
+const sql = require('mssql');
+const path = require('path');
 
 // 2. INICIALIZAR EXPRESS
 // const app = express();
@@ -45,16 +45,16 @@
  * Luego, rellenarás estos datos. ¡IMPORTANTE! Para mayor seguridad,
  * en proyectos reales usamos un archivo llamado ".env" para estas contraseñas.
  */
-// const dbSettings = {
-//     user: 'TU_USUARIO_DE_SQL',       // Ej: 'sa'
-//     password: 'TU_PASSWORD',         // Ej: 'MiContraseña123'
-//     server: 'localhost',             // Dónde está el servidor SQL alojado
-//     database: 'EcomerceDB',          // El nombre de la base de datos que crees
-//     options: {
-//         encrypt: false,              // Usa 'true' si usas Azure, 'false' para local normal
-//         trustServerCertificate: true // Requerido para desarrollo local
-//     }
-// };
+const dbSettings = {
+    user: 'TU_USUARIO_DE_SQL',       // Ej: 'sa'
+    password: 'Oscar1234.',         // Ej: 'MiContraseña123'
+    server: 'localhost',             // Dónde está el servidor SQL alojado
+    database: 'EcomerceDB',          // El nombre de la base de datos que crees
+    options: {
+        encrypt: false,              // Usa 'true' si usas Azure, 'false' para local normal
+        trustServerCertificate: true // Requerido para desarrollo local
+    }
+};
 
 // 6. CREAR TUS RUTAS (Endpoints o APIS)
 /**

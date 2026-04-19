@@ -27,60 +27,82 @@
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #EFF6FF;
     display: grid;
     grid-template-columns: 200px 1fr;
-    grid-template-rows: auto 1fr auto;
-
+    grid-template-rows: 100px 1fr;
+    height: 100vh;
     grid-template-areas:
         "header header"
         "nav main"
         "footer footer";
-    ;
-
-    header {
-        position: sticky;
-        top: 0;
-        z-index: 10;
-        border-radius: 4px;
-        grid-area: header;
-        background: linear-gradient(to right, #51A2FF, #BEDBFF);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    nav {
-        grid-area: nav;
-        background-color: #21BCFF;
-        display: flex;
-        flex-direction: column;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        grid-area: main;
-        background-color: #F0F9FF;
-    }
-
-    footer {
-        display: none;
-        grid-area: footer;
-        background-color: #052F4A;
-        color: white;
-        border-radius: 4px;
-
-        .footer_threeDivs {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-        }
-    }
-
 }
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-radius: 4px;
+    grid-area: header;
+    background: linear-gradient(to right, #51A2FF, #BEDBFF);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* ================= NAV ================= */
+
+nav {
+    grid-area: nav;
+    background-color: #21BCFF;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    height: 100vh;
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F9FF;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    grid-area: footer;
+    bottom: 0;
+    /* para no tapar el nav */
+    background-color: #052F4A;
+    color: white;
+    border-radius: 4px;
+    transition: transform 0.5s ease;
+    z-index: 20;
+}
+
+/* animación interna */
+footer .footer_threeDivs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.5s ease 0.2s;
+}
+
+footer.mostrar .footer_threeDivs {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* Menu  */
 
@@ -476,4 +498,9 @@ body {
 .carousel-track::-webkit-scrollbar {
     display: none;
 }
- 
+
+
+#AutorCredits{
+    text-align: center;
+    margin: 2px;
+}

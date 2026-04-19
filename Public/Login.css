@@ -28,14 +28,17 @@
 }
 
 body {
+    background:
+        linear-gradient(rgba(142, 229, 255, 0.4), rgba(0, 13, 255, 0.4)),
+        url('fondo.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-.login-container {
-    display: flex;
+#login-container {
+    display: block;
     padding: 5px;
     border-radius: 4px;
     justify-content: center;
@@ -99,11 +102,30 @@ button:hover {
     margin-top: 15px;
     font-size: 13px;
     color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.olvideMiContrasenia {
+    margin-top: 15px;
+    font-size: 13px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.olvideMiContrasenia:hover {
+    color: #052F4A;
 }
 
 .extra a {
+    transition: all 0.2s ease;
     color: #052F4A;
     font-weight: bold;
+}
+
+.extra a:hover {
+    color: white;
 }
 
 .Component_LineLogin {
@@ -124,7 +146,7 @@ button:hover {
 
 /* Registro */
 
-.Registro-container {
+#Registro-container {
     display: none;
     padding: 5px;
     border-radius: 4px;
@@ -139,4 +161,9 @@ button:hover {
     width: 300px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
+
+.Registro-card h2 {
+    color: white;
+    margin-bottom: 20px;
 }
