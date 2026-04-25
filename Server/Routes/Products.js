@@ -6,3 +6,6 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router;
+
+// Queda pendiente las rutas para 
+// el producto y el usuario

@@ -72,10 +72,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    DatosUserPrueba().then(data => {
-    console.log("Datos:", data);
+    DatosUserPrueba()
+    // .then(data => {
+//     console.log("Datos:", data);
         
-});
+// });
 
     // =====================================================================
     // PASO 2: PINTAR LOS DATOS (DOM MANIPULATION)
