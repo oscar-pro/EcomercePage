@@ -47,7 +47,7 @@
 
             <div class="Options">
                 <label id="LabelOptions" for="Categoria">Categoria</label>
-                <select  name="Seletc_Categories" id="SelectCategories">
+                <select name="Seletc_Categories" id="SelectCategories">
                     <!-- <option  value="Telefono">Telefono</option>
                     <option  value="Ropa">Ropa</option>
                     <option  value="Calzado">Calzado</option> -->
@@ -115,6 +115,7 @@
 
             <!-- TOP PRODUCTOS -->
             <section class="top-products">
+
                 <h2 class="section-title">Top 10 Productos</h2>
 
                 <div class="carousel">
@@ -127,8 +128,10 @@
                     </button>
 
                     <!-- 👇 CONTENEDOR LIMPIO -->
-                    <div class="carousel-track loading">
+                    <div class="carousel-trackLoading">
 
+                        <div class="skeleton-card"></div>
+                        <div class="skeleton-card"></div>
                         <div class="skeleton-card"></div>
                         <div class="skeleton-card"></div>
                         <div class="skeleton-card"></div>
@@ -150,7 +153,7 @@
             <section class="more-products">
                 <h2 class="section-title">Más Productos</h2>
 
-                <div class="carousel">
+                <div class="carouselMasProduct">
 
                     <button class="nav left">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
