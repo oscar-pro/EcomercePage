@@ -34,7 +34,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #login-container {
@@ -166,4 +166,125 @@ button:hover {
 .Registro-card h2 {
     color: white;
     margin-bottom: 20px;
+}
+
+/* Responsing */
+@media(max-width:760px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Button Reverse */
+
+    .Regresar {
+        background-color: #052F4A;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 3px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #Reverse {
+        color: white;
+        position: sticky;
+        background-color: rgba(0, 217, 255, 0.758);
+        padding: 10px;
+        border-radius: 50%;
+        margin: 0;
+    }
+
+    #Reverse:active {
+        background-color: #7bd463;
+    }
+
+    #login-container {
+        display: block;
+        padding: 5px;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-card {
+        background: linear-gradient(to right, #51A2FF, #BEDBFF);
+        padding: 15px;
+        border-radius: 12px;
+        width: 250px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .login-card h2 {
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .input-group label {
+        color: white;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .input-group input {
+        padding: 8px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        box-shadow: 2px 1px 5px #21BCFF;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 6px;
+        background-color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+        margin-bottom: 10px;
+    }
+
+/* Registro */
+
+#Registro-container {
+    display: none;
+    padding: 5px;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Registro-card {
+    background: linear-gradient(to right, #51A2FF, #BEDBFF);
+    padding: 25px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.Registro-card h2 {
+    color: white;
+    margin-bottom: 20px;
+}
 }

@@ -6,12 +6,12 @@ const Page = window.location.pathname;
 
 if (Page.includes("Index.html")) {
 
-    let IrLogin;
+    // let IrLogin;
 
-    IrLogin = document.getElementById("Login");
-    IrLogin.addEventListener('click', () => {
-        window.location = './Login.html';
-    });
+    // IrLogin = document.getElementById("Login");
+    // IrLogin.addEventListener('click', () => {
+    //     window.location = './Login.html';
+    // });
 
     let facebook = document.getElementById('Logo_Facebook');
     let instagram = document.getElementById('Logo_Insta');
@@ -34,13 +34,17 @@ if (Page.includes("Index.html")) {
 
 if (Page.includes("Login.html")) {
     //CODIGO PARA PAGINA DE REGISTRO
-
-    let login = document.getElementById('eXtra');
-    let Registro = document.getElementById('Registro-container')
-    login.addEventListener('click', () => {
-        Registro.style.display = 'block';
-        document.getElementById('login-container').style.display = 'none';
+    // Button de reversa
+    const BtnBack = document.getElementById('Reverse');;
+    BtnBack.addEventListener('click', () => {
+            window.history.go(-1);
     });
+let login = document.getElementById('eXtra');
+let Registro = document.getElementById('Registro-container')
+login.addEventListener('click', () => {
+    Registro.style.display = 'block';
+    document.getElementById('login-container').style.display = 'none';
+});
 }
 
 
@@ -63,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             console.log(resp);
 
-            return(resp);
+            return (resp);
 
         } catch (error) {
             console.error("Hubo un error contactando al backend:", error);
@@ -74,9 +78,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     DatosUserPrueba()
     // .then(data => {
-//     console.log("Datos:", data);
-        
-// });
+    //     console.log("Datos:", data);
+
+    // });
 
     // =====================================================================
     // PASO 2: PINTAR LOS DATOS (DOM MANIPULATION)

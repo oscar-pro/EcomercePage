@@ -44,7 +44,6 @@ body {
     display: grid;
     grid-template-columns: 200px 1fr;
     grid-template-rows: 100px 1fr;
-    min-height: 100vh;
     grid-template-areas:
         "header header"
         "nav main"
@@ -117,17 +116,17 @@ footer.mostrar .footer_threeDivs {
 .Divition_ProfileMenu {
     border-radius: 5px;
     display: grid;
-    justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 10%;
     margin: 5px;
     padding: 2px;
     display: grid;
 }
 
 .Profile_User {
+    height: 100%;
     padding: 2px;
-    gap: 2px;
+    gap: 8px;
     border-radius: 5px;
     display: grid;
     text-align: center;
@@ -136,8 +135,7 @@ footer.mostrar .footer_threeDivs {
 }
 
 #ProfileUser {
-    width: 200px;
-    padding: 2px;
+    padding: 5px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -149,7 +147,7 @@ footer.mostrar .footer_threeDivs {
     margin-right: 5px;
     color: white;
     border-radius: 50%;
-    padding: 2px;
+    width: 20%;
     border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
@@ -169,7 +167,7 @@ footer.mostrar .footer_threeDivs {
 }
 
 #Search_Products {
-    width: 500px;
+    width: 300px;
     outline: none;
     border: none;
     padding: 2px;
@@ -179,12 +177,19 @@ footer.mostrar .footer_threeDivs {
     box-shadow: 2px 1px 5px #21BCFF;
 }
 
+.MasOpciones {
+    display: none;
+}
+
+.Menu {
+    display: none;
+}
 
 #AsideBtn {
     display: grid;
     align-items: center;
     justify-content: center;
-    display: none;
+    display: block;
 }
 
 #BuscarBtn {
@@ -200,6 +205,7 @@ footer.mostrar .footer_threeDivs {
 
 /* Login */
 .Divition_Header_RegisterUser {
+    width: 10%;
     border-radius: 4px;
     margin: 5px;
     display: grid;
@@ -209,48 +215,44 @@ footer.mostrar .footer_threeDivs {
 
 .UserLogin {
     display: flex;
-    flex-direction: row;
-    gap: 10px;
     justify-content: center;
     align-items: center;
 }
 
-#Login,
-#Register {
-    border: 2px solid transparent;
-    padding: 5px;
-    border-radius: 4px;
+#CajaIr_Login {
+    gap: 8px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#Login {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    place-content: center;
 
     a {
         text-decoration: none;
         color: rgb(255, 255, 255);
-        font-size: 15px;
+        font-size: 1rem;
     }
 }
 
-#Register {
-    border: 1px solid rgba(255, 255, 255, 0.6);
-}
+
 
 #svglogin {
+    width: 15%;
     color: white;
     border-radius: 50%;
-    padding: 2px;
-}
-
-#svgRegister {
-    color: white;
-    border-radius: 50%;
-    padding: 2px;
 }
 
 /* NAV */
 
 .Ecomerce_NavNameAndListas {
+    position: sticky;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
@@ -331,17 +333,8 @@ footer.mostrar .footer_threeDivs {
 
 /* Main */
 
-/* .ProductosEcomerce {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    border-radius: 4px;
-    gap: 20px;
-} */
 .ecommerce {
     font-family: system-ui, sans-serif;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -351,7 +344,6 @@ footer.mostrar .footer_threeDivs {
 
 /* TITULOS */
 .section-title {
-    font-size: 22px;
     margin-bottom: 15px;
     position: relative;
     display: inline-block;
@@ -511,59 +503,4 @@ footer.mostrar .footer_threeDivs {
 #AutorCredits {
     text-align: center;
     margin: 2px;
-}
-
-
-/* RESPONSIVE */
-
-/* 📱 MÓVIL (base) */
-@media (max-width: 768px) {
-    /* móvil */
-    body {
-        grid-template-columns: 1fr;
-        /* una sola columna */
-        grid-template-rows: auto auto 1fr auto;
-        min-height: 100vh;
-        grid-template-areas:
-            "header"
-            "nav"
-            "main"
-            "footer";
-    }
-#Enlace_InicioSecion_User{
- /* falta */
-}
-    header {
-        grid-area: header;
-        display: column;
-        flex-direction: row;
-        background-color: #00e357;
-    }
-
-    nav {
-        grid-area: nav;
-    }
-
-    main {
-        grid-area: main;
-    }
-
-    footer {
-        grid-area: footer;
-    }
-
-}
-
-/* tablet */
-@media (min-width: 768px) {
-    .card {
-        width: 48%;
-    }
-}
-
-/* desktop */
-@media (min-width: 1024px) {
-    .card {
-        width: 30%;
-    }
 }
