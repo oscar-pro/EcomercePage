@@ -6,6 +6,11 @@ const Page = window.location.pathname;
 
 if (Page.includes("Index.html")) {
 
+    let Menu = document.querySelector('section-title');
+    Menu.addEventListener('click',()=>{
+        alert('hola')
+    });
+
     // let IrLogin;
 
     // IrLogin = document.getElementById("Login");
